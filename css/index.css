@@ -1,1 +1,194 @@
-/* Compile your LESS file! */
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #E6E6FA;
+}
+.container .loremzo {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.container .loremzo p {
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+@media (max-width: 500px) {
+  .container {
+    justify-content: center;
+    justify-content: space-evenly;
+    align-content: center;
+    max-width: 90%;
+  }
+}
+.container img {
+  max-width: 30%;
+}
+.container h2 {
+  color: #F5FFFA;
+}
+.container header {
+  background-color: #5F9EA0;
+}
+.container header nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-around;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+  }
+}
+.container header nav a {
+  color: #F5FFFA;
+}
+.container header nav a a.button1:hover {
+  color: #000000;
+  background-color: #5F9EA0;
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  background-color: #5F9EA0;
+}
+.container footer p {
+  color: #F5FFFA;
+}
+.container ul {
+  max-width: 100%;
+  font: 1rem 'Fira Sans', sans-serif;
+  margin-bottom: 0.5rem;
+}
+.container ul li {
+  padding: 0.3rem;
+  border: 1px dashed black;
+}
+.container li {
+  max-width: 100%;
+  font: 1rem 'Fira Sans', sans-serif;
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.container .topBlock {
+  display: flex;
+  justify-content: space-between;
+  padding: 10%;
+  border-bottom: 1px dotted black;
+  margin-bottom: 2%;
+}
+.container .topBlock a.button1 {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  transition: all 0.2s;
+}
+@media (max-width: 500px) {
+  .container .topBlock a.button1 {
+    margin: 10% auto;
+    width: 100%;
+  }
+}
+.container .topBlock a.button1:hover {
+  color: #000000;
+  background-color: #5F9EA0;
+}
+.container .topBlock img {
+  max-width: 100%;
+}
+@media (max-width: 500px) {
+  .container .topBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .topBlock img {
+    max-width: 100%;
+  }
+}
+.container .topBlock .cookie {
+  padding-bottom: 10%;
+  padding-left: 20%;
+  line-height: 1.5;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .container .topBlock .cookie {
+    padding: 1%;
+  }
+}
+.container .botBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.container .botBlock h3 {
+  align-self: center;
+}
+.container .midBlock {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.container .midBlock div {
+  margin: 0 auto;
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .container .midBlock {
+    margin-bottom: 10%;
+    border-bottom: 1px dashed black;
+  }
+}
+.container .midBlock .listenTxt {
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .container .midBlock .listenTxt {
+    max-width: 80%;
+    line-height: 1.5rem;
+    margin-bottom: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .container .midBlock {
+    flex-direction: column;
+  }
+  .container .midBlock div {
+    max-width: 100%;
+    padding: 1%;
+  }
+}
+.container table,
+.container td {
+  padding: 1%;
+  max-width: 100%;
+}
+.container h3 {
+  margin-bottom: 1rem;
+}
