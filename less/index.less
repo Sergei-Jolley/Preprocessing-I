@@ -1,59 +1,246 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+
+
 }
 
-html, body {
-    height: 100%;
+
+@someColor: #F5FFFA;
+
+.btn() {
+
+	a.button1 {
+		display: inline-block;
+		padding: 0.35em 1.2em;
+		border: 0.1em solid black;
+		margin: 0 0.3em 0.3em 0;
+		border-radius: 0.12em;
+		box-sizing: border-box;
+		text-decoration: none;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		color: black;
+		text-align: center;
+		transition: all 0.2s;
+
+		@media(max-width:500px) {
+			margin: 10% auto;
+			width: 100%;
+		}
+	}
+
+	a.button1:hover {
+		color: #000000;
+		background-color: #5F9EA0;
+	}
 }
 
+.bg() {
+	background-color: #E6E6FA;
+}
+
+.textColor() {
+	color: @someColor;
+}
+
+.backColor() {
+	background-color: #5F9EA0;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	.bg();
+
+	.loremzo {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+
+		p {
+			margin-top: 3%;
+			margin-bottom: 10%;
+		}
+	}
+
+	@media(max-width:500px) {
+		justify-content: center;
+		justify-content: space-evenly;
+		align-content: center;
+		max-width: 90%;
+
+
+	}
+
+	img {
+		max-width: 30%;
+	}
+
+	h2 {
+		.textColor()
+	}
+
+	header {
+		.backColor()
+	}
+
+	header nav {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		justify-content: space-around;
+		padding: 20px 10px;
+		font-size: 14px;
+
+		@media(max-width:500px) {
+			flex-direction: column;
+			align-items: center;
+			line-height: 1.5rem;
+		}
+
+		a {
+			a.button1:hover {
+				color: #000000;
+				background-color: #5F9EA0;
+			}
+
+			color: @someColor;
+		}
+	}
+
+
+	footer {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		padding: 1rem;
+		.backColor();
+
+		p {
+			color: @someColor
+		}
+	}
+
+	ul {
+		max-width: 100%;
+		font: 1rem 'Fira Sans',
+			sans-serif;
+		margin-bottom: .5rem;
+
+		li {
+			padding: .3rem;
+			border: 1px dashed black;
+		}
+	}
+
+	li {
+		max-width: 100%;
+		font: 1rem 'Fira Sans', sans-serif;
+		margin-left: 1.2rem;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+
+	.topBlock {
+		display: flex;
+		justify-content: space-between;
+		padding: 10%;
+		border-bottom: 1px dotted black;
+		margin-bottom: 2%;
+		.btn();
+
+		img {
+			max-width: 100%;
+		}
+
+		@media(max-width:500px) {
+			flex-direction: column;
+			align-items: center;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.cookie {
+			padding-bottom: 10%;
+			padding-left: 20%;
+			line-height: 1.5;
+			justify-content: space-around;
+
+			@media(max-width: 500px) {
+				padding: 1%;
+
+			}
+		}
+	}
+
+	.botBlock {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		justify-content: space-evenly;
+		align-content: center;
+
+		h3 {
+			align-self: center;
+		}
+
+	}
+
+	.midBlock {
+		display: flex;
+		align-items: center;
+		max-width: 100%;
+
+		div {
+			margin: 0 auto;
+			max-width: 30%;
+		}
+
+		@media(max-width:500px) {
+			margin-bottom: 10%;
+			border-bottom: 1px dashed black;
+
+		}
+
+		.listenTxt {
+			max-width: 30%;
+
+			@media(max-width:500px) {
+				max-width: 80%;
+				line-height: 1.5rem;
+				margin-bottom: 10%;
+
+			}
+		}
+
+		@media(max-width:500px) {
+			flex-direction: column;
+
+			div {
+				max-width: 100%;
+				padding: 1%;
+			}
+		}
+	}
+
+	table,
+	td {
+		padding: 1%;
+		max-width: 100%;
+	}
+
+
+	h3 {
+		margin-bottom: 1rem;
+	}
+
+
+}
